@@ -48,7 +48,7 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: JavaScript to Python Translator & JavaScript interpreter written in 100% pure Python.
-  doc_url: http://piter.io/projects/js2py
+  doc_url: http://piter.io/projects/js2py # does not support https
   dev_url: https://github.com/PiotrDabkowski/Js2Py
 
 extra:
