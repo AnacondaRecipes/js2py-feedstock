@@ -13,11 +13,13 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: True  # [py<36]
-  
+
 requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools
+    - wheel
   run:
     - python >=3.6
     - pyjsparser >=2.5.1
