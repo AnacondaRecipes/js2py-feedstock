@@ -39,6 +39,8 @@ test:
     - js2py.py_node_modules
     - js2py.translators
     - js2py.utils
+  command:
+    - pip check
 
 about:
   home: https://github.com/PiotrDabkowski/Js2Py
