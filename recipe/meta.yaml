@@ -27,6 +27,8 @@ requirements:
     - tzlocal >=1.2
 
 test:
+  requires:
+    - pip
   imports:
     - js2py
     - js2py.constructors
