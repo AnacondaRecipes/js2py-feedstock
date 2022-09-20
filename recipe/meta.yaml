@@ -17,9 +17,11 @@ build:
 requirements:
   host:
     - pip
+    - python
     - setuptools
     - wheel
   run:
+    - python
     - pyjsparser >=2.5.1
     - six >=1.10
     - tzlocal >=1.2
