@@ -41,7 +41,7 @@ test:
     - js2py.py_node_modules
     - js2py.translators
     - js2py.utils
-  command:
+  commands:
     - pip check
 
 about:
