@@ -1,5 +1,5 @@
 {% set name = "Js2Py" %}
-{% set version = "0.71" %}
+{% set version = "0.74" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a41b1009dd1498ae7d436bfa5ac952a08ca92a4bb9e31dca6e8bb966b49f7fce
+  sha256: 39f3a6aa8469180efba3c8677271df27c31332fd1b471df1af2af58b87b8972f
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [py<35]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
+  skip: True  # [py<38]
 
 requirements:
   host:
@@ -41,7 +41,7 @@ test:
     - js2py.py_node_modules
     - js2py.translators
     - js2py.utils
-  command:
+  commands:
     - pip check
 
 about:
@@ -50,6 +50,9 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: JavaScript to Python Translator & JavaScript interpreter written in 100% pure Python.
+  description: |
+    Translates JavaScript to Python code. Js2Py is able to translate and execute virtually any JavaScript code.
+    Js2Py is written in pure python and does not have any dependencies. Basically an implementation of JavaScript core in pure python.
   doc_url: http://piter.io/projects/js2py # does not support https
   dev_url: https://github.com/PiotrDabkowski/Js2Py
 
